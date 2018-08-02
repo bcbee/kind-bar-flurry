@@ -1,5 +1,8 @@
 # kind-bar-flurry
 
+# Demo
+[![Demo](https://img.youtube.com/vi/iod9upyTxR8/0.jpg)](https://www.youtube.com/watch?v=iod9upyTxR8)
+
 # Setup
 1. Install the package: `yarn add kind-bar-flurry` or `npm install kind-bar-flurry`
 2. Start the listener after the page has loaded (onload event): `import Kind from 'kind-bar-flurry'; Kind()`
