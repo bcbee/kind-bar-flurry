@@ -142,7 +142,7 @@ export default function start() {
 
       let i = 0;
       activeBars.forEach((bar, index, object) => {
-        if (Math.floor((new Date() - bar.created) / 1000) > 30) {
+        if (Math.floor((new Date() - bar.created) / 1000) > 20) {
           World.remove(world, bar);
           object.splice(index, 1);
         }
