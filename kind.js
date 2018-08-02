@@ -6,6 +6,7 @@ import kind4 from "./images/4.png"
 import kind5 from "./images/5.png"
 
 const barFlavors = [kind1, kind2, kind3, kind4, kind5];
+const activeBars = [];
 
 /**
  * Returns a random integer between min (inclusive) and max (inclusive)
@@ -67,6 +68,8 @@ setInterval(() => {
     }
   });
 
+  activeBars.push({body, created: new Date()});
+
   Body.setVelocity(body, { x: 24 * dir, y: -10 });
   Body.setAngularVelocity(body, (Math.PI / 16) * dir);
 
@@ -111,13 +114,6 @@ const bottomWall = Bodies.rectangle(
 
 World.add(world, bottomWall);
 
-setInterval(() => {
-  World.remove(world, bottomWall);
-  setTimeout(() => {
-    World.add(world, bottomWall);
-  }, 2000);
-}, 10000);
-
 // add mouse control
 var mouse = Mouse.create(render.canvas),
   mouseConstraint = MouseConstraint.create(engine, {
@@ -134,3 +130,18 @@ World.add(world, mouseConstraint);
 
 // keep the mouse in sync with rendering
 render.mouse = mouse;
+
+setInterval(() => {
+  World.remove(world, bottomWall);
+  setTimeout(() => {
+    World.add(world, bottomWall);
+  }, 2000);
+
+  let i = 0;
+  activeBars.forEach((bar, index, object) => {
+    if (Math.floor((new Date() - bar.created) / 1000) > 30) {
+      World.remove(world, bar)
+      object.splice(index, 1);
+    }
+  })
+}, 10000);
