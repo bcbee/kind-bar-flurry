@@ -1,6 +1,33 @@
 {
   "dependencies": {
-    "images": "^3.0.1",
+    "konami-code": "^0.2.1",
     "matter-js": "^0.14.2"
-  }
+  },
+  "name": "kind-bar-flurry",
+  "description": "# Setup",
+  "version": "1.0.0",
+  "main": "kind.js",
+  "directories": {
+    "example": "example"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendancboyle/kind-bar-flurry.git"
+  },
+  "keywords": [
+    "kind",
+    "bar",
+    "flurry",
+    "meme"
+  ],
+  "author": "Brendan Boyle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brendancboyle/kind-bar-flurry/issues"
+  },
+  "homepage": "https://github.com/brendancboyle/kind-bar-flurry#readme"
 }
