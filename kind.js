@@ -90,7 +90,7 @@ World.add(world, [
 
   // Left wall
   Bodies.rectangle(
-    0 - 15,
+    0 - 25,
     window.innerHeight / 2 + 250,
     50,
     window.innerHeight,
