@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "konami-code": "^0.2.1",
+    "konami-code": "^0.3.0",
     "matter-js": "^0.14.2"
   },
   "name": "kind-bar-flurry",
